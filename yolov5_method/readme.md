@@ -3,4 +3,5 @@
 ### choice 1: Train the model from scratch:
 Given the training dataset is too large to upload here, we give a brief instruction on how to train the model. The key point is to construct a training set.
 Note that every image contains only one vehicle in class 0, 1 or 2, according to yolov5, the training data set shall be constructed in this way:
-the training set constains two sub directories: trainset/images/... and trainset/labels/..., note that the name of "trainset" can be changed but "images" and "labels" should not be changed.
+the training set constains two sub directories: trainset/images/... and trainset/labels/..., note that the name of "trainset" can be changed but "images" and "labels" should not be changed.\\
+In
