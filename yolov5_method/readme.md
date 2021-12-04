@@ -28,7 +28,14 @@ so that the "default" parameters takes the relative location of the test set, an
 
 
 ## step 3: conduct detection
-This step is simply run the code detect.py, and it will generate the labeled images in runs/detect/exp*/ (* differes by different run times, varies from empty, 1, 2, and increasing), moreover, the corresponding lables will be generated in runs/detect/exp*/labels/, and they are 2631 .txt files containing the detected labels and the corresponding box location (takes the same format as the training labels).
+This step is simply run the code detect.py, and it will generate the labeled images in runs/detect/exp*/ (* differes by different run times, varies from empty, 1, 2, and increasing), moreover, the corresponding lables will be generated in runs/detect/exp*/labels/, and they are 2631 .txt files containing the detected labels and the corresponding box location (takes almost the same format as the training labels, but this time, the confidence level is also given). Here is an example:  
+####### example.txt ########  
+1 0.529258 0.446768 0.0323929 0.0285171 0.93  
+###########################################  
+Note the last term 0.93 here means the confidence level for the detected object, and also note that there is not necessary to be only one object detected in a single image, we will take the one with the largest confidence level.
+
+
+
 
 
 
