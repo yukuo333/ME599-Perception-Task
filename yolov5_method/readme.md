@@ -27,6 +27,10 @@ parser.add_argument('--source', type=str, default='../test_data/images', help='s
 so that the "default" parameters takes the relative location of the test set, and it is just a set of images itself, and in our case, it has 2631 images.
 
 
+## step 3: conduct detection
+This step is simply run the code detect.py, and it will generate the labeled images in runs/detect/exp*/ (* differes by different run times, varies from empty, 1, 2, and increasing), moreover, the corresponding lables will be generated in runs/detect/exp*/labels/, and they are 2631 .txt files containing the detected labels and the corresponding box location (takes the same format as the training labels).
+
+
 
 
 
