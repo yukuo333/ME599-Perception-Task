@@ -24,7 +24,9 @@ This step is relatively easy, but be sure to update the code in detect.py to ali
 ####### detect.py #######  
 parser.add_argument('--source', type=str, default='../test_data/images', help='source')  # file/folder, 0 for webcam    
 #########################  
-so that the "default" parameters takes the relative location of the test set.
+so that the "default" parameters takes the relative location of the test set, and it is just a set of images itself, and in our case, it has 2631 images.
+
+
 
 
 
