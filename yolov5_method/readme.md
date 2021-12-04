@@ -21,6 +21,7 @@ Download it and unzip to the directory runs/detect/, so that the consequent code
 
 ## step 2: set up the test set  
 This step is relatively easy, but be sure to update the code in detect.py to align with the directory of your own test set directory, i.e, change this line of code in detect.py:  
+'<parser.add_argument('--source', type=str, default='../test_data/images', help='source')  # file/folder, 0 for webcam>'  
 
 
 
