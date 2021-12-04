@@ -8,7 +8,7 @@ In trainset/images, it contains the 7573 images of .jpg format, which are just t
 ####### example.txt ########  
 1 0.529258 0.446768 0.0323929 0.0285171   
 ###########################################  
-Note here 1 stands for the label, 0.529258 is the block center's x-coordinate (normalized), 0.446768 is the block center's y-coordinates (normalized), 0.0323929 is the block's width (normalized), and 0.0285171 is the block's height (normalized). The block containing the vehicle is constructed based on the given bbox coordinates.   B 
+Note here 1 stands for the label, 0.529258 is the block center's x-coordinate (normalized), 0.446768 is the block center's y-coordinates (normalized), 0.0323929 is the block's width (normalized), and 0.0285171 is the block's height (normalized). The block containing the vehicle is constructed based on the given bbox coordinates.   
 After the training set is done, it can then be feed into train.py to train the model.  
 Before doing the training, one also needs to modify the file data/mydata.ymal, to change the directories there for the training set aligns with your own training set's directory.
 
@@ -21,9 +21,10 @@ Download it and unzip to the directory runs/detect/, so that the consequent code
 
 ## step 2: set up the test set  
 This step is relatively easy, but be sure to update the code in detect.py to align with the directory of your own test set directory, i.e, change this line of code in detect.py:     
-####### detect.py #######
-parser.add_argument('--source', type=str, default='../test_data/images', help='source')  # file/folder, 0 for webcam  
-#########################
+####### detect.py #######  
+parser.add_argument('--source', type=str, default='../test_data/images', help='source')  # file/folder, 0 for webcam    
+#########################  
+so that the "default" parameters takes the relative location of the test set.
 
 
 
