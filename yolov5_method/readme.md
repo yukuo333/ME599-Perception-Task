@@ -1,6 +1,6 @@
 # Steps of using this code:
-## step1: Get the trained Weights
-### choice 1: Train the model from scratch:
+## step1: Get the trained weights
+### choice 1: Train the model from scratch
 Given the training dataset is too large to upload here, we give a brief instruction on how to train the model. The key point is to construct a training set.
 Note that every image contains only one vehicle in class 0, 1 or 2, according to yolov5, the training data set shall be constructed in this way:
 the training set constains two sub directories: trainset/images/... and trainset/labels/..., note that the name of "trainset" can be changed but "images" and "labels" should not be changed.  
@@ -13,10 +13,15 @@ After the training set is done, it can then be feed into train.py to train the m
 Before doing the training, one also needs to modify the file data/mydata.ymal, to change the directories there for the training set aligns with your own training set's directory.
 
 
-### choice 2: Use our trained weight:
+### choice 2: Use our trained weight
 We have run the train.py code for 70/300 epochs (given time limitation) and the weight file (larger than 25MB and cannot be uploaded here) can be found based on this link:  
 [our weight in google drive](https://drive.google.com/drive/folders/1sO_2jmsFzSGNHhf5USEjXP7da1DUI7xm)  
-Download it and unzip to the directory runs/detect/, so that the consequent code can be executed.
+Download it and unzip to the directory runs/detect/, so that the consequent code can be executed, note the name of the weight is called **best.pt**
+
+
+## step 2: set up the test set  
+This step is relatively easy, but be sure to update the code in detect.py to align with the directory of your own test set directory, i.e, change this line of code in detect.py:  
+
 
 
 
