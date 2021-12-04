@@ -34,6 +34,10 @@ This step is simply run the code detect.py, and it will generate the labeled ima
 ###########################################  
 Note the last term 0.93 here means the confidence level for the detected object, and also note that there is not necessary to be only one object detected in a single image, we will take the one with the largest confidence level.
 
+## step 4: generate .csv file
+
+
+
 
 
 
