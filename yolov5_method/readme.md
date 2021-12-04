@@ -8,7 +8,14 @@ In trainset/images, it contains the 7573 images of .jpg format, which are just t
 ####### example.txt ########  
 1 0.529258 0.446768 0.0323929 0.0285171   
 ###########################################  
-Note here 1 stands for the label, 0.529258 is the block center's x-coordinate (normalized), 0.446768 is the block center's y-coordinates (normalized), 0.0323929 is the block's width (normalized), and 0.0285171 is the block's height (normalized). The block containing the vehicle is constructed based on the given bbox coordinates.
+Note here 1 stands for the label, 0.529258 is the block center's x-coordinate (normalized), 0.446768 is the block center's y-coordinates (normalized), 0.0323929 is the block's width (normalized), and 0.0285171 is the block's height (normalized). The block containing the vehicle is constructed based on the given bbox coordinates.   B 
+After the training set is done, it can then be feed into train.py to train the model.  
+Before doing the training, one also needs to modify the file 
+
+
+### choice 2: Use our trained weight:
+We have run the train.py code for 70/300 epochs (given time limitation) and the weight file (larger than 25MB and cannot be uploaded here) can be found based on this link:  
+[our weight in google drive](https://drive.google.com/drive/folders/1sO_2jmsFzSGNHhf5USEjXP7da1DUI7xm)  
 
 
 
