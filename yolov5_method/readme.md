@@ -35,9 +35,8 @@ This step is simply run the code detect.py, and it will generate the labeled ima
 Note the last term 0.93 here means the confidence level for the detected object, and also note that there is not necessary to be only one object detected in a single image, we will take the one with the largest confidence level.
 
 ## step 4: generate .csv file
-
-
-
+Run the file runs/detect/gen_test_file.py, it will automatically generate a .csv file called **prediction_1.csv** under the same directory. This .csv file will be used to generate the final file to submit together with another two .csv files (we introduced weights in three methods and combined them).
+ 
 
 
 
