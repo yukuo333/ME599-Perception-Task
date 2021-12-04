@@ -5,7 +5,8 @@ Given the training dataset is too large to upload here, we give a brief instruct
 Note that every image contains only one vehicle in class 0, 1 or 2, according to yolov5, the training data set shall be constructed in this way:
 the training set constains two sub directories: trainset/images/... and trainset/labels/..., note that the name of "trainset" can be changed but "images" and "labels" should not be changed.  
 In trainset/images, it contains the 7573 images of .jpg format, which are just the images we downloaeded directlt; and in trainset/lables, it contains the corresponding 7573 .txt files with the same file name as the images, and in each .txt file, the label as well as the block position containing the vehicle is provided in this way:  
-####### example.txt ########
-1 0.529258 0.446768 0.0323929 0.0285171 0.78
-###########################################
+####### example.txt ########  
+1 0.529258 0.446768 0.0323929 0.0285171 0.78  
+###########################################  
+
 
