@@ -11,13 +11,13 @@ final_project\
   │  ├── 0\
   │  ├── 1\
   │  ├── 2\
-  ├──label.csv\
+  └── label.csv\
 
 ### InceptionV3
 final_project\
   ├── inception.py\
   ├── trainval_IMG\
-  │  ├── 0\
-  │  ├── 1\
-  │  ├── 2\
-  ├──label.csv\
+   │  ├── 0\
+   │  ├── 1\
+   │  ├── 2\
+  └── label.csv\
