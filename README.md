@@ -8,16 +8,16 @@ This repositiory includes three separate methods of object classification: Resne
 final_project\
   ├── resnet2.py\
   ├── trainval_IMG\
-  │   ├── 0
-  │   ├── 1
-  │   ├── 2
-  ├──label.csv
+  │   ├── 0\
+  │   ├── 1\
+  │   ├── 2\
+  ├──label.csv\
 
 ### InceptionV3
-final_project
-  ├── inception.py
-  ├── trainval_IMG
-  │   ├── 0
-  │   ├── 1
-  │   ├── 2
-  ├──label.csv
+final_project\
+  ├── inception.py\
+  ├── trainval_IMG\
+  │   ├── 0\
+  │   ├── 1\
+  │   ├── 2\
+  ├──label.csv\
