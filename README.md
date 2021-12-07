@@ -18,8 +18,8 @@ final_project\
 final_project\
   ├── inception.py\
   ├── trainval_IMG\
-   │  ├── 0\
-   │  ├── 1\
-   │  ├── 2\
+  │  ├── 0\
+  │  ├── 1\
+  │  ├── 2\
   └── label.csv\
 ```
