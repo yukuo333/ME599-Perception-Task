@@ -23,3 +23,5 @@ final_project\
   │  ├── 2\
   └── label.csv\
 ```
+
+To train and obtain the prediction label, simply run resnet2.py or inception.py. An output csv file "prediction_label.csv" will be created in the same folder.
