@@ -67,5 +67,9 @@ This step is simply run the code detect.py, and it will generate the labeled ima
 Note the last term 0.93 here means the confidence level for the detected object, and also note that there is not necessary to be only one object detected in a single image, we will take the one with the largest confidence level.
 
 ## step 4: generate .csv file
-Run the file runs/detect/gen_test_file.py, it will automatically generate a .csv file called **prediction_1.csv** under the same directory. This .csv file will be used to generate the final file to submit together with another two .csv files (we introduced weights in three methods and combined them).
+Run the file runs/detect/gen_test_file.py, it will automatically generate a .csv file called **prediction_1.csv** under the same directory. This .csv file will be used to generate the final file to submit together with another two .csv files (we introduced weights in three methods and combined them).  
+
+# Combining the results
+Up to now we have three separate .csv files generated using three different methods, we give each method a weight of 0.33. Then, for a single image, we need to combine the 3 results for testing: if two or three of the methods classify the image in the same category, we will then assign the image to that category; if three methods generates 3 results, we will assign the image randomly to the three categories (this is a rare case). Sometimes yolov5 cannot detect the vehicle inside the image, if this is the case, we will run the same idea on the other two methods.  
+We have provided the code to do this task, and the name is combine.py. Just download it with three .csv files under the same directory, then it will generate a new .csv file.
  
