@@ -40,19 +40,19 @@ In trainset/images, it contains the 7573 images of .jpg format, which are just t
 1 0.529258 0.446768 0.0323929 0.0285171   
 ###########################################  
 Note here 1 stands for the label, 0.529258 is the block center's x-coordinate (normalized), 0.446768 is the block center's y-coordinates (normalized), 0.0323929 is the block's width (normalized), and 0.0285171 is the block's height (normalized). The block containing the vehicle is constructed based on the given bbox coordinates.   
-we have provided the code for doing this task, which is under yolov5_method directory, and the name is data_process_yolov5.py.  
+we have provided the code for doing this task, which is under yolov5_method directory, and the name is **data_process_yolov5.py**.  
 After the training set is done, it can then be feed into train.py to train the model.  
 Before doing the training, one also needs to modify the file data/mydata.ymal, to change the directories there for the training set aligns with your own training set's directory.
 
 
 ### choice 2: Use our trained weight
-We have run the train.py code for 70/300 epochs (given time limitation) and the weight file (larger than 25MB and cannot be uploaded here) can be found based on this link:  
+We have run the **train.py** code for 70/300 epochs (given time limitation) and the weight file (larger than 25MB and cannot be uploaded here) can be found based on this link:  
 [our weight in google drive](https://drive.google.com/drive/folders/1sO_2jmsFzSGNHhf5USEjXP7da1DUI7xm)  
 Download it and unzip to the directory runs/detect/, so that the consequent code can be executed, note the name of the weight is called **best.pt**
 
 
 ## step 2: set up the test set  
-This step is relatively easy, but be sure to update the code in detect.py to align with the directory of your own test set directory, i.e, change this line of code in detect.py:     
+This step is relatively easy, but be sure to update the code in **detect.py** to align with the directory of your own test set directory, i.e, change this line of code in detect.py:     
 ####### detect.py #######  
 parser.add_argument('--source', type=str, default='../test_data/images', help='source')  # file/folder, 0 for webcam    
 #########################  
@@ -60,16 +60,16 @@ so that the "default" parameters takes the relative location of the test set, an
 
 
 ## step 3: conduct detection
-This step is simply run the code detect.py, and it will generate the labeled images in runs/detect/exp*/ (* differes by different run times, varies from empty, 1, 2, and increasing), moreover, the corresponding lables will be generated in runs/detect/exp*/labels/, and they are 2631 .txt files containing the detected labels and the corresponding box location (takes almost the same format as the training labels, but this time, the confidence level is also given). Here is an example:  
+This step is simply run the code **detect.py**, and it will generate the labeled images in runs/detect/exp*/ (* differes by different run times, varies from empty, 1, 2, and increasing), moreover, the corresponding lables will be generated in runs/detect/exp*/labels/, and they are 2631 .txt files containing the detected labels and the corresponding box location (takes almost the same format as the training labels, but this time, the confidence level is also given). Here is an example:  
 ####### example.txt ########  
 1 0.529258 0.446768 0.0323929 0.0285171 0.93  
 ###########################################  
 Note the last term 0.93 here means the confidence level for the detected object, and also note that there is not necessary to be only one object detected in a single image, we will take the one with the largest confidence level.
 
 ## step 4: generate .csv file
-Run the file runs/detect/gen_test_file.py, it will automatically generate a .csv file called **prediction_1.csv** under the same directory. This .csv file will be used to generate the final file to submit together with another two .csv files (we introduced weights in three methods and combined them).  
+Run the file **runs/detect/gen_test_file.py**, it will automatically generate a .csv file called **prediction_1.csv** under the same directory. This .csv file will be used to generate the final file to submit together with another two .csv files (we introduced weights in three methods and combined them).  
 
 # Combining the results
 Up to now we have three separate .csv files generated using three different methods, we give each method a weight of 0.33. Then, for a single image, we need to combine the 3 results for testing: if two or three of the methods classify the image in the same category, we will then assign the image to that category; if three methods generates 3 results, we will assign the image randomly to the three categories (this is a rare case). Sometimes yolov5 cannot detect the vehicle inside the image, if this is the case, we will run the same idea on the other two methods.  
-We have provided the code to do this task, and the name is combine.py. Just download it with three .csv files under the same directory, then it will generate a new .csv file.
+We have provided the code to do this task, and the name is **combine.py**. Just download it with three .csv files under the same directory, then it will generate a new .csv file.
  
