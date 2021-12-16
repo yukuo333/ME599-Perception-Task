@@ -12,7 +12,7 @@ import random
 from random import choice
 
 # yolov5
-file_1 = np.loadtxt('prediction_contains_invalid.csv', skiprows=1, dtype=str, delimiter=',')
+file_1 = np.loadtxt('prediction_1.csv', skiprows=1, dtype=str, delimiter=',')
 # deepnet 1
 file_2 = np.loadtxt('prediction_label.csv', skiprows=1, dtype=str, delimiter=',')
 # deepnet 2
